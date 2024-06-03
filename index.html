@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="icon" type="image/x-icon" href="../gen-res/image/to_do.ico">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="heading">Create Your To Do List</div>
+        <div class="div">
+          <input class="note" placeholder="Take a note" required>
+          <button class="add"
+            onclick="
+                addnote();
+            ">Add</button><button class="trash"
+            onclick="
+                trash();
+            ">clear</button>
+        </div>
+        <div class="datadiv"></div>
+    </div>
+    
+    <script src="js/index.js"></script>
+</body>
+</html>

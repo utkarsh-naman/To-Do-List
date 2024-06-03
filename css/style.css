@@ -1,0 +1,177 @@
+@font-face {
+  font-family: contb;
+  src: url('../res/font/contb.ttf');
+}
+@font-face{
+  font-family: dn;
+  src: url('../res/font/Death Note.ttf');
+}
+
+@font-face{
+  font-family: dgp;
+  src: url('../res/font/dogicapixel.ttf');
+}
+
+@font-face {
+  font-family: dn1;
+  src: url('../res/font/Death Note1.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #282c34; 
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    background-color: #282c34;  
+}
+
+.heading {
+    margin-top: 30px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    user-select: none;
+    font-family: contb; 
+    font-size: clamp(20px, 5vw, 60px);
+    color:lightgreen;
+}
+
+.div{
+  margin-top: 30px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+
+  font-family: contb; 
+  font-size: clamp(20px, 5vw, 60px);
+  color: white;
+}
+
+.trash{
+  width: 5vw;
+  height: 5vw;
+  margin-left: 7px;
+  background-color: red;
+  color: white;
+  border-radius: 12.5px;
+  border: none;
+  cursor: pointer;
+}
+
+.note{
+  width: 50vw;
+  height: 5vw;
+  border: 3px solid whitesmoke;
+  background-color: #282c34;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-right: 5px;
+  border-radius: 7px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.add{
+  height: 5vw;
+  width: 5vw;
+  border: none;
+  user-select: none;
+  border-radius: 7px;
+  cursor: not-allowed;
+}
+
+.note:valid +.add{
+  cursor: pointer;
+  background-color: chartreuse;
+}
+
+.note:valid +.note{
+  border: 3px solid chartreuse;
+}
+
+.datadiv{
+  display: flex ;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+  color: aliceblue;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+
+.elementindiv {
+  width: calc(100% - 100px);
+  margin: 0 50px;
+  border: 3px solid greenyellow;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:5px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.todolist{
+  justify-content: center;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.elementindiv p {
+  margin: 0;
+  padding-left: 20px;
+  color: aliceblue;
+  font-size: 30px;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.elementindiv button {
+  height: 5vw;
+  width: 10vw;
+  border-radius: 60px;
+  border: none;
+  color: #282c34;
+  font-weight: bold;
+  background-color: coral;
+  cursor: grab;
+  margin-left: 10px;
+  user-select: none;
+  
+}
+
+
+.delete:hover{
+  color: azure;
+  background-color: red;
+  font-family: dgp;
+}
+
+.elementindiv .copy{
+  background-color: lightblue;
+  user-select: none;
+}
+
+.elementindiv .copy:hover{
+  background-color: blue;
+  color:aliceblue;
+  cursor: grabbing;
+  font-family: dgp;
+}
