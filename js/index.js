@@ -24,7 +24,7 @@ function render(){
   let htmldata = '';
   for(let i = 0; i< allnotesarray.length; i++){
     htmldata += `<div class="elementindiv">
-    <p class=\`paratext${i}\`>${allnotesarray[i]}</p>
+    <p class=\`paratext${i}\`>${escapeHTML(allnotesarray[i])}</p>
     <button class="copy copy${i}" onclick = "copynote(${i})">Copy</button>
     <button class="delete" onclick = "deletenote(${i});">Delete</button>
 </div>`;
@@ -57,4 +57,18 @@ function trash(){
   localStorage.removeItem('allnotesarrayrecord');
   allnotesarray = [];
   render();
+}
+
+
+function escapeHTML(str) {
+  return str.replace(/[&<>'"]/g, function (tag) {
+    var charsToReplace = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      "'": '&#39;',
+      '"': '&quot;'
+    };
+    return charsToReplace[tag] || tag;
+  });
 }

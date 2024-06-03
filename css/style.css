@@ -139,6 +139,7 @@ html, body {
   padding-left: 20px;
   color: aliceblue;
   font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   flex-grow: 1;
   text-align: left;
 }
